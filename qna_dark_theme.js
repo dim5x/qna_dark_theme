@@ -7,6 +7,10 @@
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=habr.com
 // @match        https://qna.habr.com/*
 // @grant        GM_addStyle
+// @homepageURL  https://github.com/dim5x/qna_dark_theme
+// @updateURL    https://raw.githubusercontent.com/dim5x/qna_dark_theme/refs/heads/master/qna_dark_theme.js
+// @downloadURL  https://raw.githubusercontent.com/dim5x/qna_dark_theme/refs/heads/master/qna_dark_theme.js
+// @supportURL   https://github.com/dim5x/qna_dark_theme/issues
 // ==/UserScript==
 
 (function() {
