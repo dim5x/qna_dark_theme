@@ -13,7 +13,7 @@
 // @supportURL   https://github.com/dim5x/qna_dark_theme/issues
 // ==/UserScript==
 
-(function() {
+(function () {
     'use strict';
 
     GM_addStyle(`
@@ -338,4 +338,9 @@ select {
     content: "🔴" !important;
 }
     `);
+    // Создаём метку использования тёмной темы.
+    const marker = document.createElement('div');
+    marker.id = 'dark-theme-marker';
+    marker.style.display = 'none'; // Скрываем элемент
+    document.body.appendChild(marker);
 })();
