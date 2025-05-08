@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Dark theme for qna.habr.com
+// @name         Тёмная тема для qna.habr.com
 // @namespace    http://tampermonkey.net/
 // @version      2025-05-07
 // @description  Тёмная тема для qna.habr.com
