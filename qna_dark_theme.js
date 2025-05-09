@@ -1,34 +1,24 @@
-// ==UserScript==
-// @name         Тёмная тема для qna.habr.com
-// @namespace    http://tampermonkey.net/
-// @version      2025-05-07
-// @description  Тёмная тема для qna.habr.com
-// @author       dim5x
-// @icon         https://www.google.com/s2/favicons?sz=64&domain=habr.com
-// @match        https://qna.habr.com/*
-// @grant        GM_addStyle
-// @homepageURL  https://github.com/dim5x/qna_dark_theme
-// @updateURL    https://raw.githubusercontent.com/dim5x/qna_dark_theme/refs/heads/master/qna_dark_theme.js
-// @downloadURL  https://raw.githubusercontent.com/dim5x/qna_dark_theme/refs/heads/master/qna_dark_theme.js
-// @supportURL   https://github.com/dim5x/qna_dark_theme/issues
-// ==/UserScript==
-
-(function () {
+(function() {
     'use strict';
 
     GM_addStyle(`
+/* ================= Общие стили ================= */
+/*:root {
+  --dark-bg: #505b6e; /*Общий фон*/
+  --dark-text: #e0e0e0;
+  --light-bg: #e0e0e0;
+  --light-text: #000;
+  --accent-green: #65c178;
+  --input-bg: #3a4457;
+  --code-bg: #CED4D4;
+  --hover-bg: #eef2f5;
+}*/
 /* ------------------------- */
 /* Верхнее левое меню "Хабр" */
 /* ------------------------- */
 
 #dropdown {
-    background-color: #505b6e !important;
-    color: #505b6e !important;
     border: solid 1px #000;
-}
-
-a.service {
-    background-color: #505b6e !important;
 }
 
 /* Меняем цвет SVG элементов */
@@ -38,9 +28,11 @@ path {
 
 /* ----------end------------ */
 
-header,
+header, a.service,
 div.layout__body::before,
-aside, dl, dd, dt, .page_header {
+aside,
+dl, dd, dt,
+.page_header {
     background-color: #505b6e !important;
     color: #fff !important;
 }
@@ -76,10 +68,6 @@ nav {
     color: #000 !important;
 }
 
-a {
-    color: #e0e0e0 !important;
-}
-
 a.filters-menu__link {
     background-color: #505b6e !important;
     color: #e0e0e0 !important;
@@ -88,16 +76,40 @@ a.filters-menu__link {
 
 /* Кнопка подписаться. #65c178 */
 button.btn.btn_subscribe,
-.btn_solution {
-    color: #fff !important;
+button.btn.btn_outline_green,
+button.btn.btn_outline_grey,
+.btn_solution,
+.btn_like,
+.btn_complexity-filter,
+.filters-menu.filters-menu_mobile
+{
+    color: #71c07b !important;
     border: 1px solid !important;
     border-color:  #71c07b !important;
 }
 
-.btn_solution:hover {
+button.btn.btn_subscribe:hover,
+button.btn.btn_outline_grey:hover,
+button.btn.btn_outline_green:hover,
+.btn_solution:hover,
+.btn_like:hover,
+.btn_complexity-filter:hover
+{
     border-color: #369249 !important;
     background-color: #505b6e !important;
 }
+
+.filters-menu__link_active {
+border: 2px solid !important;
+    border-color:  #71c07b !important;
+}
+
+/* To-do Кнопка закрыть при выборе сложности вопросов */
+.popup__close-btn:hover {
+    color: red !important;
+}
+
+
 
 /* Альтернативный ник */
 .user-summary__nickname {
@@ -160,6 +172,7 @@ textarea {
     border: none;
 }
 
+/* Рамка вокруг поля комментариев */
 .form_comments {
     background-color: #505b6e !important;
 }
@@ -212,6 +225,9 @@ textarea {
 /* --------------end--------------------- */
 
 
+a.menu_item-link {
+background: red !important}
+
 .icons-bar.icons-bar_horizontal{
     background-color: #e0e0e0 !important;
     border: solid 1px #000;
@@ -233,9 +249,6 @@ a.filters-menu__link.filters-menu__link_active {
     background-color: #505b6e !important;
 }
 
-.section-header__title {
-    color: #e0e0e0;
-}
 
 .section-header {
     border-bottom: 2px solid #e0e0e0;
@@ -270,7 +283,7 @@ a.filters-menu__link.filters-menu__link_active {
 /*  Меню вопроса: жалоба / редакция    */
 /* ----------------------------------- */
 
-a.menu__item-link {
+.menu_dropdown a.menu__item-link {
    color: black !important;
    background-color : #ced4d4 !important;
    }
@@ -285,9 +298,11 @@ background-color : #CED4D4 !important;
 }
 /* ---------------end----------------- */
 
-.question__views-count, .question__date {
-    color: #e0e0e0;
+a,h1,.question__views-count,.question__date,.section-header__title {
+    color: #e0e0e0 !important;
 }
+
+
 
 .question__title-link {
     color: #000;
@@ -296,10 +311,6 @@ background-color : #CED4D4 !important;
 button {
     background-color: #505b6e !important;
     color: #fff !important;
-}
-
-h1 {
-    color: #e0e0e0 !important;
 }
 
 p, div {
@@ -371,6 +382,5 @@ select {
         element: marker,
         time: new Date(parseInt(marker.dataset.createdAt)).toLocaleTimeString()
     });
-
 
 })();
