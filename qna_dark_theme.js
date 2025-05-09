@@ -101,7 +101,7 @@ button.btn.btn_subscribe,
 
 /* Альтернативный ник */
 .user-summary__nickname {
-    color: #CED2D4 !important;
+    color: #CED2D4;
 }
 
 
@@ -205,7 +205,7 @@ textarea {
     font-weight: 700;
     font-size: 14px;
     color: #000;
-    background-color: #e0e0e0;
+    background-color: #e0e0e0; /*#e0e0e0;*/
     text-decoration: none;
     border-bottom: solid 1px #000;
 }
@@ -261,9 +261,29 @@ a.filters-menu__link.filters-menu__link_active {
     display: block;
     border-bottom: 1px solid #f0f0f0 !important;
     padding: 12px;
-}
+    }
 /* ---------------end----------------- */
 
+
+
+/* ----------------------------------- */
+/*  Меню вопроса: жалоба / редакция    */
+/* ----------------------------------- */
+
+a.menu__item-link {
+   color: black !important;
+   background-color : #ced4d4 !important;
+   }
+
+a.menu__item-link:hover,
+#abuse_question_link_1396548:hover {
+   background: #eef2f5 !important;
+   }
+
+#abuse_question_link_1396548 {
+background-color : #CED4D4 !important;
+}
+/* ---------------end----------------- */
 
 .question__views-count, .question__date {
     color: #e0e0e0;
@@ -338,9 +358,19 @@ select {
     content: "🔴" !important;
 }
     `);
-    // Создаём метку использования тёмной темы.
+
+    // Создаём метку с временем создания
     const marker = document.createElement('div');
     marker.id = 'dark-theme-marker';
-    marker.style.display = 'none'; // Скрываем элемент
+    marker.dataset.active = 'true';
+    marker.dataset.createdAt = Date.now(); // Временная метка
+    marker.style.display = 'none';
     document.body.appendChild(marker);
+
+    console.log('[Тёмная тема] Метка создана:', {
+        element: marker,
+        time: new Date(parseInt(marker.dataset.createdAt)).toLocaleTimeString()
+    });
+
+
 })();
