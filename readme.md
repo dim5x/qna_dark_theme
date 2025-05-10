@@ -22,7 +22,10 @@
 
 Скриншоты:
 -----------
-
+![qna_dark_theme_1.png](screenshots%2Fqna_dark_theme_1.png)
+![qna_dark_theme_2.png](screenshots%2Fqna_dark_theme_2.png)
+![qna_dark_theme_3.png](screenshots%2Fqna_dark_theme_3.png)
+![qna_dark_theme_4.png](screenshots%2Fqna_dark_theme_4.png)
 
 Разработка:
 -----------
