@@ -400,7 +400,7 @@ li.content-list__item {
 
     console.log('[Тёмная тема] Метка создана:', {
         element: marker,
-        time: new Date(parseInt(marker.dataset.createdAt)).toLocaleTimeString()
+        time: new Date(parseInt(marker.dataset.createdAt, 10)).toLocaleTimeString()
     });
 
 })();
