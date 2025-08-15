@@ -3,6 +3,8 @@
 
 Тёмная тема для [qna.habr.com](https://qna.habr.com) .
 
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/9fc0944ac59843a296009733ffe23178)](https://app.codacy.com/gh/dim5x/qna_dark_theme/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
+
 Установка:
 ----------
 
