@@ -6,7 +6,7 @@
 ----------
 1. Установите расширение [Tampermonkey](https://www.tampermonkey.net/) в ваш браузер.
 2. Перейдите по ссылке на raw-скрипт:  
-   https://raw.githubusercontent.com/dim5x/qna_dark_theme/refs/heads/master/qna_dark_theme.js  
+   <https://raw.githubusercontent.com/dim5x/qna_dark_theme/refs/heads/master/qna_dark_theme.js>  
 3. Tampermonkey предложит установить userscript — подтвердите.
 
 
@@ -30,8 +30,8 @@
 Разработка:
 -----------
 Автор: dim5x  
-GitHub: https://github.com/dim5x/qna_highlighter  
-Issue tracker: https://github.com/dim5x/qna_highlighter/issues
+GitHub: <https://github.com/dim5x/qna_highlighter>  
+Issue tracker: <https://github.com/dim5x/qna_highlighter/issues>
 
 Лицензия:
 ---------
