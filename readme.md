@@ -11,7 +11,6 @@
    <https://raw.githubusercontent.com/dim5x/qna_dark_theme/refs/heads/master/qna_dark_theme.js>  
 3. Tampermonkey предложит установить userscript — подтвердите.
 
-
 Структура репозитория:
 -----------------------
 
@@ -22,7 +21,6 @@
 -----------
 
 Скрипт автоматически обновляется при публикации новой версии в ветке `master`.
-
 
 Скриншоты:
 -----------
